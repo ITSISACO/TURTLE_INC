@@ -10,6 +10,7 @@ body{
     margin:0;
     padding:0;
     background-color:#f4f4f4;
+    text-align: center;
 }
 
 
@@ -71,7 +72,7 @@ body{
     color:#ffc107 !important;
 }
 
-.perfil-info h2{
+.contenido h2{
     text-align:center;
     margin-top:20px;
     color:#333;
@@ -81,7 +82,7 @@ footer{
     background-color:#222;
     color:white;
     text-align:center;
-    padding:15px 0;
+    padding: 1px px 0;
     position:fixed;
     bottom:0;
     width:100%;
@@ -93,52 +94,25 @@ footer{
     color:#666;
 }
 
-.perfil-info img{
-    display:block;
-    margin:20px auto;
-    border-radius:50%;
-    width:150px;
-    height:150px;
+body h2{
+    color: #333;
 }
 
-.perfil-info{
-    text-align: center;
-    background: white;
-    width: 450px;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+body p{
+    color: #666;
 }
 
-.perfil-info img{
-    border-radius: 50%;
-    margin: 20px 0;
-}
-
-.botones{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.botones button{
-    padding: 14px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(90deg,#FFD700,#81C784);
+.boton1{
+    display: inline-block;
+    padding-bottom: 100px 100px;
+    background: linear-gradient(90deg, #FFD700, #81C784);
     color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: .3s;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+   
 }
 
-
-button:hover {
-    color: #ffee07;
+.boton1:hover{
+    background: orange;
 }
-
-
-
-
