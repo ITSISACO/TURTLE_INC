@@ -87,8 +87,10 @@ footer{
     width:100%;
 }
 
-.contenido p{
+.Botones {
     text-align:center;
-    margin:13px 0;
-    color:#666;
+}
+
+button {
+    background-color: aquamarine;
 }
