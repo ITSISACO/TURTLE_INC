@@ -92,5 +92,19 @@ footer{
 }
 
 button {
-    background-color: aquamarine;
+    background: linear-gradient(90deg, #FFD700, #81C784);
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+    width: 450px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+button:hover {
+    color: #ffee07;
 }
