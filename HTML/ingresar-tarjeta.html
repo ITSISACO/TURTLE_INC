@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Nueva Tarjeta</title>
+    <link rel="stylesheet" href="../CSS/ingresar-tarjeta.css">
+</head>
+<body>
+
+    <header>
+        <h1>Registrar Nueva Tarjeta</h1>
+    </header>
+
+    <nav>
+        <div class="logo">
+            <a href="inicio.html">TURTLE INC</a>
+        </div>
+
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="eliminar-metodo.html">Servicios</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section class="contenedor">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/2489/2489756.png" alt="Tarjeta">
+
+            <h2>Agregar Nuevo Método de Pago</h2>
+
+            <p>
+                Ingresa los datos de tu nueva tarjeta para continuar realizando tus compras de forma segura.
+            </p>
+
+            <form>
+
+                <label>Número de tarjeta</label>
+                <input type="text" placeholder="1234 5678 9012 3456">
+
+                <label>Nombre del titular</label>
+                <input type="text" placeholder="Nombre completo">
+
+                <div class="fila">
+
+                    <div class="campo">
+                        <label>Fecha de vencimiento</label>
+                        <input type="text" placeholder="MM/AA">
+                    </div>
+
+                    <div class="campo">
+                        <label>CVV</label>
+                        <input type="password" placeholder="123">
+                    </div>
+
+                </div>
+
+                <button type="button" onclick="mostrarMensaje()">
+                    Guardar Tarjeta
+                </button>
+
+                <button type="button" class="volver"
+                onclick="window.location.href='perfil.html'">
+                    Volver al Perfil
+                </button>
+
+            </form>
+
+            <div id="mensaje" class="mensaje-exito">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Correcto">
+
+                <h3>¡Tu tarjeta ha sido guardada!</h3>
+
+                <p>
+                    Tu nuevo método de pago fue registrado correctamente.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 TURTLE INC</p>
+    </footer>
+
+<script>
+
+function mostrarMensaje(){
+
+    document.getElementById("mensaje").style.display="block";
+
+    window.scrollTo({
+        top:document.body.scrollHeight,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
