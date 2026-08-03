@@ -79,7 +79,7 @@ body{
 .contenido h2{
     text-align:center;
     margin-top:20px;
-    color:#333;
+    color:#2e8b2e;
 }
 
 footer{
@@ -99,11 +99,11 @@ footer{
 }
 
 body h2{
-    color: #333;
+    color: #2e8b2e;
 }
 
 body p{
-    color: #666;
+    color: white;
 }
 
 .contenedor-boton{
