@@ -1,13 +1,12 @@
 header{
     background: linear-gradient(90deg, #FFD700, #81C784);
     color:white;
-    padding:10px 0;
+    padding: 2px;
     text-align:center;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    margin:0;
+    font-family:'Luckiest Guy',cursive;
     padding:0;
     background-color:#f4f4f4;
 }
@@ -91,4 +90,37 @@ footer{
     text-align:center;
     margin:13px 0;
     color:#666;
+}
+
+.contenido {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Luckiest Guy',cursive;    
+    line-height: 1.8;
+}
+
+
+.contenido h2 {
+    text-align: center;
+    color: #2e8b57;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.contenido p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+.contenido strong {
+    color: #1b5e20;
+    font-size: 1.15rem;
 }
