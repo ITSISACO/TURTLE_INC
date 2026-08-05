@@ -129,3 +129,65 @@ body{
 .busqueda button:hover{
     background: #ffb700;
 }
+
+footer{
+    background-color:#222;
+    color:white;
+    text-align:center;
+    padding: 1px px 0;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}
+
+.guia-medidas{
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+    text-align: center;
+}
+
+.guia-medidas h2{
+    margin-bottom: 25px;
+    font-size: 35px;
+}
+
+.imagen-guia{
+    margin-bottom: 25px;
+}
+
+.imagen-guia img{
+    width: 300px;
+    max-width: 100%;
+}
+
+.guia-medidas table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.guia-medidas th{
+    background: linear-gradient(90deg,#FFD700,#81C784);
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.guia-medidas td{
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.guia-medidas tr:nth-child(even){
+    background: #f7f7f7;
+}
+
+.guia-medidas tr:hover{
+    background: #ececec;
+    transition: .3s;
+}

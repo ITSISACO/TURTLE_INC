@@ -181,3 +181,12 @@ body{
     line-height:35px;
     color:#555;
 }
+footer{
+    background-color:#222;
+    color:white;
+    text-align:center;
+    padding: 1px px 0;
+    position:fixed;
+    bottom:0;
+    width:100%;
+}

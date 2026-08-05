@@ -81,12 +81,11 @@ footer{
     background-color:#222;
     color:white;
     text-align:center;
-    padding:1px 0;
+    padding: 1px px 0;
     position:fixed;
     bottom:0;
     width:100%;
 }
-
 .contenido p{
     text-align:center;
     margin:13px 0;
