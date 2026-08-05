@@ -1,12 +1,13 @@
 header{
     background: linear-gradient(90deg, #FFD700, #81C784);
     color:white;
-    padding: 10px 0;
+    padding:10px 0;
     text-align:center;
 }
 
 body{
-    font-family:'Luckiest Guy',cursive;
+    font-family: 'Luckiest Guy',cursive;
+    margin:0;
     padding:0;
     background-color:#f4f4f4;
     text-align: center;
@@ -71,6 +72,34 @@ body{
     color:#ffc107 !important;
 }
 
+.contenedor{
+    width:90%;
+    margin:40px auto;
+    display:flex;
+    gap:30px;
+}
+
+.info,
+.recompensas{
+    flex:1;
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.info p,
+.recompensas p{
+    color:#555;
+    text-align:center;
+    line-height:1.8;
+}
+
+.info h2,
+.recompensas h2{
+    color:#2e8b2e;
+    text-align:center;
+}
 
 .busqueda{
     display: flex;
@@ -99,85 +128,4 @@ body{
 
 .busqueda button:hover{
     background: #ffb700;
-}
-
-.detalle-producto{
-    display:flex;
-    gap:50px;
-    padding:40px;
-}
-
-.galeria{
-    width:60%;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.galeria img{
-    width:100%;
-    border-radius:15px;
-}
-
-.info{
-    width:40%;
-}
-
-.info h1{
-    font-size:35px;
-    margin:10px 0;
-}
-
-.info h2{
-    font-size:28px;
-    margin-bottom:20px;
-}
-
-.codigo{
-    color:gray;
-}
-
-.tallas{
-    display:flex;
-    gap:10px;
-    margin:25px 0;
-}
-
-.tallas button{
-    width:60px;
-    height:45px;
-    border:1px solid #000;
-    background:white;
-    cursor:pointer;
-}
-
-.tallas button:hover{
-    background:#000;
-    color:white;
-}
-
-.boton1,
-.boton2{
-    width:100%;
-    padding:15px;
-    margin-top:15px;
-    border:none;
-    cursor:pointer;
-    font-size:16px;
-}
-
-.boton1{
-    background:white;
-    border:1px solid #000;
-}
-
-.boton2{
-    background:#3b4633;
-    color:white;
-}
-
-.beneficios{
-    margin-top:30px;
-    line-height:35px;
-    color:#555;
 }
