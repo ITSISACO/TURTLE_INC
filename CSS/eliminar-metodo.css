@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(90deg,#FFD700,#81C784);
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+header h1{
+    font-size:42px;
+}
+
+/* NAV */
+
+nav{
+    background:#222;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+}
+
+.logo a{
+    color:white;
+    text-decoration:none;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#FFD700;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+
+    width:550px;
+    margin:60px auto;
+    background:white;
+    border-radius:15px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.contenedor img{
+
+    width:90px;
+    margin-bottom:20px;
+
+}
+
+.contenedor h2{
+
+    color:#222;
+    margin-bottom:15px;
+
+}
+
+.contenedor p{
+
+    color:#555;
+    line-height:25px;
+
+}
+
+/* TARJETA */
+
+.tarjeta{
+
+    margin:30px 0;
+    background:#fafafa;
+    border-left:6px solid #FFD700;
+    padding:20px;
+    border-radius:10px;
+    text-align:left;
+
+}
+
+.tarjeta h3{
+
+    margin-bottom:15px;
+    color:#222;
+
+}
+
+.tarjeta p{
+
+    margin-bottom:10px;
+    font-size:17px;
+
+}
+
+/* ADVERTENCIA */
+
+.advertencia{
+
+    background:#fff3cd;
+    color:#856404;
+    border:1px solid #ffeeba;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:30px;
+    font-weight:bold;
+
+}
+
+/* BOTONES */
+
+.botones{
+
+    display:flex;
+    gap:15px;
+
+}
+
+.botones button{
+
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+/* ELIMINAR */
+
+.eliminar{
+
+    background:#dc3545;
+    color:white;
+
+}
+
+.eliminar:hover{
+
+    background:#b02a37;
+    transform:scale(1.03);
+
+}
+
+/* CANCELAR */
+
+.cancelar{
+
+    background:#444;
+    color:white;
+
+}
+
+.cancelar:hover{
+
+    background:linear-gradient(90deg,#FFD700,#81C784);
+    color:#222;
+    transform:scale(1.03);
+
+}
+
+/* FOOTER */
+
+footer{
+
+    margin-top:60px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+
+}

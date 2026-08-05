@@ -122,11 +122,13 @@ button:hover{
 /* Pie */
 
 footer{
-    background:#1f1f1f;
+    background-color:black;
     color:white;
     text-align:center;
-    padding:20px;
-    margin-top:50px;
+    padding: 1px px 0;
+    position:fixed;
+    bottom:0;
+    width:100%;
 }
 
 @media(max-width:800px){
@@ -162,3 +164,33 @@ margin-top:15px;
 .logo:hover{
     color: white;
 }
+
+.busqueda{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.busqueda input{
+    width: 220px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 15px;
+}
+
+.busqueda button{
+    padding: 8px 15px;
+    border: none;
+    background: #ffd000;
+    color: black;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    font-weight: bold;
+}
+
+.busqueda button:hover{
+    background: #ffb700;
+}
+
