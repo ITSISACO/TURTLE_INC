@@ -89,9 +89,11 @@ footer{
 
 .Botones {
     text-align:center;
+    margin-top: 60px;
+    border-top: 60px;
 }
 
-button {
+.button {
     background: linear-gradient(90deg, #FFD700, #81C784);
     padding: 14px;
     border: none;
@@ -102,7 +104,7 @@ button {
     transition: .3s;
     width: 450px;
     height: 60px;
-    margin-top: 30px;
+    
 }
 
 button:hover {
