@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago | TURTLE INC</title>
+    <link rel="stylesheet" href="../CSS/pago.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>TURTLE INC</h1>
+</header>
+
+<div class="contenedor">
+
+    <div class="producto">
+        <div class="galeria">
+
+    <img id="imagenProducto" src="imagenes/camisa1.jpg" alt="Camisa">
+
+</div>
+
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPyiUbDU6mDCChqtKs_xhTOrKP3eNNP82OSHLpzEWLUQpn6t0wetKXdo&s=10" alt="Camiseta">
+
+        <h2>Camiseta Oversize</h2>
+
+        <p>Color: Negro</p>
+        <p>Talla: M</p>
+
+        <div class="precio">
+            Total: <span>$199.000</span>
+        </div>
+
+    </div>
+
+    <div class="pago">
+
+        <h2>Información de Pago</h2>
+
+        <form>
+
+            <label>Número de tarjeta</label>
+            <input type="text" placeholder="1234 5678 9012 3456">
+
+            <label>Nombre del titular</label>
+            <input type="text" placeholder="Nombre completo">
+
+            <div class="fila">
+
+                <div class="campo">
+                    <label>Direccion</label>
+                    <input type="text" placeholder="Ej:cra 82 #9A sur 79">
+                </div>
+
+                <div class="campo">
+                    <label>Numero de celular</label>
+                    <input type="celular" placeholder="123">
+                </div>
+
+            </div>
+
+            
+
+            <button type="button" onclick="pagar()">
+                Confirmar Pago
+            </button>
+
+        </form>
+
+        <div id="mensaje">
+            ✅ ¡Compra realizada con éxito!
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function pagar(){
+
+document.getElementById("mensaje").style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
