@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'luckiest Guy',cursive;
+}
+
+body{
+    background:linear-gradient(135deg,#f6f7fb,#dfe9f3);
+}
+
+header{
+    background:linear-gradient(90deg, #FFD700, #81C784);
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:20px;
+    letter-spacing:2px;
+}
+
+.contenedor{
+    width:90%;
+    max-width:1100px;
+    margin:50px auto;
+    display:flex;
+    gap:40px;
+}
+
+.producto,
+.pago{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 35px linear-gradient(90deg, #FFD700, #81C784)(0,0,0,.15);
+}
+
+.producto{
+    width:40%;
+    text-align:center;
+}
+
+.producto img{
+    width:100%;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.producto img:hover{
+    transform:scale(1.05);
+}
+
+.producto h2{
+    margin-top:20px;
+    color:#1f2937;
+}
+
+.producto p{
+    color:#666;
+    margin:10px 0;
+}
+
+.precio{
+    margin-top:20px;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.precio span{
+    color:linear-gradient(90deg, #FFD700, #81C784);
+}
+
+.pago{
+    width:60%;
+}
+
+.pago h2{
+    margin-bottom:20px;
+    color:#1f2937;
+}
+
+label{
+    display:block;
+    margin-top:18px;
+    font-weight:600;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin-top:6px;
+    border:none;
+    border-radius:10px;
+    background:#f3f5f7;
+    font-size:15px;
+    outline:none;
+}
+
+input:focus{
+    border:2px solid linear-gradient(90deg, #FFD700, #81C784);
+}
+
+.fila{
+    display:flex;
+    gap:20px;
+}
+
+.campo{
+    width:100%;
+}
+
+button{
+    width:100%;
+    margin-top:30px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg, #FFD700, #81C784);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:linear-gradient(90deg, #FFD700, #81C784);
+    transform:translateY(-2px);
+}
+
+#mensaje{
+    display:none;
+    margin-top:25px;
+    background:#d4edda;
+    color:linear-gradient(90deg, #FFD700, #81C784);
+    text-align:center;
+    padding:15px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+@media(max-width:900px){
+
+.contenedor{
+    flex-direction:column;
+}
+
+.producto,
+.pago{
+    width:100%;
+}
+
+}
+
+
