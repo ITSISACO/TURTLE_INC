@@ -1,83 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prendas Masculinas</title>
-
+    <title>TURTLE INC</title>
     <link rel="stylesheet" href="../CSS/prendasmasculinas.css">
 </head>
-
 <body>
-
-<header>
+    <header>
     <h1>Prendas Masculinas</h1>
 </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            
+            
+            <a class="navbar-brand" href="inicio.html"> TURTLE INC</a>
+        
+            </button>
 
-<div class="contenedor">
-
-    <div class="card">
-
-        <img src="../imagenes/camisa.jpg">
-
-        <div class="info">
-
-            <h2>Nombre de la prenda</h2>
-
-            <p><b>Tallas:</b> S - M - L - XL</p>
-
-            <p><b>Precio:</b> $00.000</p>
-
-            <p>
-                Escribe aquí la descripción de la prenda.
-            </p>
-
+            <div class="busqueda">
+    <input type="text" id="buscar" placeholder="Buscar...">
+    <button onclick="buscarContenido()">🐢</button>
         </div>
+            
+            <div class="collapse navbar-collapse" id="menu">
 
-    </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ultimos-drops.html">Ultimos drops</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="caparazones.html">Caparazones</a>
+                    </li>
 
-    <div class="card">
+                    <li class="nav-item">
+                        <a class="nav-link" href="prendas.html">Prendas</a>
+                    </li>
 
-        <img src="../imagenes/pantalon.jpg">
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil</a>
+                    </li>
+                </ul>
+                
+            </div>
+    </nav> 
 
-        <div class="info">
+        <section class="productos">
+            <div class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPyiUbDU6mDCChqtKs_xhTOrKP3eNNP82OSHLpzEWLUQpn6t0wetKXdo&s=10" alt="buzo 1">
+                <h3>Buzo Turtle Inc</h3>
+                <p class="precio">$199.000</p>
+            </div>
+        </section>
 
-            <h2>Nombre de la prenda</h2>
 
-            <p><b>Tallas:</b> 30 - 32 - 34 - 36</p>
-
-            <p><b>Precio:</b> $00.000</p>
-
-            <p>
-                Escribe aquí la descripción.
-            </p>
-
-        </div>
-
-    </div>
-
-    <div class="card">
-
-        <img src="../imagenes/buso.jpg">
-
-        <div class="info">
-
-            <h2>Nombre de la prenda</h2>
-
-            <p><b>Tallas:</b> M - L - XL</p>
-
-            <p><b>Precio:</b> $00.000</p>
-
-            <p>
-                Escribe aquí la descripción.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
 
 </body>
-</html>
