@@ -192,3 +192,13 @@ footer{
     background: #ececec;
     transition: .3s;
 }
+
+.volver {
+    display: block;
+    color: #777;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    text-align: left;}

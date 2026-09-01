@@ -287,11 +287,13 @@ body{
 
     font-size: 20px;
 
-    cursor: pointer;
+    text-decoration: none;
+
 }
 
 .comprar:hover {
     background-color: #66bb6a;
+    text-decoration: none;
 }
 
 
@@ -314,3 +316,12 @@ body{
     }
 
 }
+.volver {
+    display: block;
+    color: #777;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    text-align: left;}
