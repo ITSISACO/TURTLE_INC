@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TURTLE INC</title>
+    <link rel="stylesheet" href="../CSS/carritotortugo.css">
+</head>
+<body>
+    <header>
+    <h1>Carrito de Compras</h1>
+</header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            
+            
+            <a class="navbar-brand" href="inicio.html"> TURTLE INC</a>
+        
+            </button>
+
+            <div class="busqueda">
+    <input type="text" id="buscar" placeholder="Buscar...">
+    <button onclick="buscarContenido()">🐢</button>
+        </div>
+            
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ultimos-drops.html">Ultimos drops</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="caparazones.html">Caparazones</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="prendas.html">Prendas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil</a>
+                    </li>
+                </ul>
+                
+            </div>
+    </nav> 
+    <main class="carrito">
+
+        <h2>Mis productos</h2>
+
+
+        <!-- PRODUCTO 1 -->
+        <div class="producto-carrito">
+
+            <img
+                src="../imagenes/camisahombre.png"
+                alt="Camiseta Turtle INC"
+            >
+
+            <div class="producto-info">
+
+                <h3>Camiseta Turtle INC</h3>
+
+                <p>
+                    Camiseta negra edición especial
+                </p>
+
+            </div>
+
+            <div class="precio">
+                $199.000
+            </div>
+
+            <div class="cantidad">
+
+                <button onclick="cambiarCantidad(0, -1)">
+                    -
+                </button>
+
+                <span id="cantidad0">
+                    1
+                </span>
+
+                <button onclick="cambiarCantidad(0, 1)">
+                    +
+                </button>
+
+            </div>
+
+            <button
+                class="eliminar"
+                onclick="eliminarProducto(this)"
+            >
+                x
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTO 2 -->
+        <div class="producto-carrito">
+
+            <img
+                src="../imagenes/topmujer.png"
+                alt="Hoodie Turtle INC"
+            >
+
+            <div class="producto-info">
+
+                <h3>Hoodie Turtle INC</h3>
+
+                <p>
+                    Hoodie edición limitada
+                </p>
+
+            </div>
+
+            <div class="precio">
+                $129.000
+            </div>
+
+            <div class="cantidad">
+
+                <button onclick="cambiarCantidad(1, -1)">
+                    −
+                </button>
+
+                <span id="cantidad1">
+                    1
+                </span>
+
+                <button onclick="cambiarCantidad(1, 1)">
+                    +
+                </button>
+
+            </div>
+
+            <button
+                class="eliminar"
+                onclick="eliminarProducto(this)"
+            >
+                x
+            </button>
+
+        </div>
+
+
+        <!-- TOTAL -->
+        <div class="total">
+
+            Total:
+            <strong id="total">
+                $140.000
+            </strong>
+
+        </div>
+
+
+        <!-- BOTÓN DE COMPRA -->
+        <a href="compra-finalizada.html">
+            <button
+                class="comprar"
+                
+            >
+                Finalizar compra 🐢
+            </button>
+        </a>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        let precios = [199000, 129000];
+
+        let cantidades = [1, 1];
+
+
+        function cambiarCantidad(producto, cambio) {
+
+            cantidades[producto] += cambio;
+
+            if (cantidades[producto] < 1) {
+
+                cantidades[producto] = 1;
+
+            }
+
+            document.getElementById(
+                "cantidad" + producto
+            ).innerText = cantidades[producto];
+
+            calcularTotal();
+        }
+
+
+        function calcularTotal() {
+
+            let total = 0;
+
+            for (let i = 0; i < precios.length; i++) {
+
+                total += precios[i] * cantidades[i];
+
+            }
+
+            document.getElementById("total").innerText =
+                "$" + total.toLocaleString("es-CO");
+
+        }
+
+
+        function eliminarProducto(boton) {
+
+            let producto = boton.parentElement;
+
+            producto.remove();
+
+            calcularTotal();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

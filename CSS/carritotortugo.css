@@ -1,0 +1,316 @@
+header{
+    background: linear-gradient(90deg, #FFD700, #81C784);
+    color:white;
+    padding: 10px 0;
+    text-align:center;
+}
+
+body{
+    font-family:'Luckiest Guy',cursive;
+    padding:0;
+    background-color:#f4f4f4;
+    text-align: center;
+}
+
+
+
+/* Barra de navegación */
+.navbar{
+    box-shadow:0 3px 10px rgba(0,0,0,0.3);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color:#222;
+    padding:15px 30px;
+}
+
+/* Contenedor principal */
+.container-fluid{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* Logo */
+.navbar-brand{
+    font-size:1.5rem;
+    font-weight:bold;
+    color:white;
+    text-decoration:none;
+}
+
+
+.navbar-collapse{
+    display:flex;
+}
+
+
+.navbar-nav{
+    display:flex;
+    flex-direction:row;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+
+.nav-item{
+    margin-left:15px;
+}
+
+
+.nav-link{
+    color:white !important;
+    text-decoration:none;
+    padding:10px 15px;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#ffc107 !important;
+}
+
+.boton-buscar {
+    height: 35px;
+    border: none;
+    background-color: #FFD700;
+    padding: 0 18px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.busqueda{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.busqueda input{
+    width: 220px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 15px;
+}
+
+.busqueda button{
+    padding: 8px 15px;
+    border: none;
+    background: #ffd000;
+    color: black;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    font-weight: bold;
+}
+
+.busqueda button:hover{
+    background: #ffb700;
+}
+
+
+
+/* MENÚ */
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #FFD700;
+}
+
+
+/* CARRITO */
+
+.carrito {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.carrito h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+
+/* PRODUCTOS */
+
+.producto-carrito {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 2px solid #eeeeee;
+}
+
+
+/* IMAGEN DEL PRODUCTO */
+
+.producto-carrito img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+
+/* INFORMACIÓN */
+
+.producto-info {
+    flex: 1;
+}
+
+.producto-info h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.producto-info p {
+    margin: 5px 0;
+    color: #555;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* PRECIO */
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* CANTIDAD */
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cantidad button {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #FFD700;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.cantidad button:hover {
+    background-color: #81C784;
+}
+
+.cantidad span {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+/* BOTÓN ELIMINAR */
+
+.eliminar {
+    border: none;
+
+    background-color: #e74c3c;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.eliminar:hover {
+    background-color: #c0392b;
+}
+
+
+/* TOTAL */
+
+.total {
+    text-align: right;
+
+    margin-top: 30px;
+
+    font-size: 28px;
+}
+
+
+/* BOTÓN COMPRAR */
+
+.comprar {
+    display: block;
+
+    margin-left: auto;
+    margin-top: 20px;
+
+    background-color: #81C784;
+
+    border: none;
+
+    color: white;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    font-family: 'Luckiest Guy', cursive;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.comprar:hover {
+    background-color: #66bb6a;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .container-fluid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .producto-carrito {
+        flex-wrap: wrap;
+    }
+
+}
