@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos para el pedido</title>
+    <link rel="stylesheet" href="../CSS/pedido.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <a href="#" class="volver">‹ Back</a>
+
+        <h1>Datos para el pedido</h1>
+
+        <form action="verificar.html">
+
+            <div class="campo">
+                <label for="direccion">Dirección</label>
+                <input 
+                    type="text" 
+                    id="direccion" 
+                    name="direccion"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Número de teléfono</label>
+                <input 
+                    type="tel" 
+                    id="telefono" 
+                    name="telefono"
+                    required
+                >
+            </div>
+
+            <div class="campo api">
+                <label for="api">API <span>(opcional)</span></label>
+                <input 
+                    type="text" 
+                    id="api" 
+                    name="api"
+                >
+            </div>
+
+            <div class="opcion">
+                <h2>Avisar cuando mi pedido sea enviado</h2>
+
+                <div class="botones">
+                    <label>
+                        <input type="radio" name="aviso" value="si" required>
+                        <span>Sí</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="aviso" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="opcion">
+                <h2>Seguir mi pedido</h2>
+
+                <div class="botones">
+                    <label>
+                        <input type="radio" name="seguimiento" value="si" required>
+                        <span>Sí</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="seguimiento" value="no">
+                        <span>No</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="continuar">
+                Continuar
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>

@@ -122,14 +122,15 @@ button:hover{
 /* Pie */
 
 footer{
-    background-color:black;
+    background-color:#222;
     color:white;
     text-align:center;
-    padding: 1px px 0;
-    position:fixed;
+    padding:15px 0;
+    position:center;
     bottom:0;
     width:100%;
 }
+
 
 @media(max-width:800px){
 
