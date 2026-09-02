@@ -11,14 +11,11 @@
 <body>
     <header>
         <h1>Perfil de Usuario</h1>
-        <a href="carrito.html" class="boton-carrito">
-        🛒 Carrito
-    </a>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="inicio.html">TURTLE INC</a>
-            </button>
+
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -33,58 +30,53 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="perfil.html">Perfil</a>
                     </li>
+                    <!-- Carrito integrado en la barra negra -->
+                    <li class="nav-item">
+                        <a href="carritotortugo.html" class="boton-carrito">🛒</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <main>
-        <main>
-            <section class="perfil-info">
+        <section class="perfil-info">
 
-                <h2>Información del Usuario</h2>
+            <h2>Información del Usuario</h2>
 
-                <img src="https://thumbs.dreamstime.com/b/vector-de-perfil-avatar-predeterminado-foto-usuario-medios-sociales-icono-183042379.jpg"
-                    alt="Avatar del usuario" width="120" height="120">
+            <img src="https://thumbs.dreamstime.com/b/vector-de-perfil-avatar-predeterminado-foto-usuario-medios-sociales-icono-183042379.jpg"
+                alt="Avatar del usuario" width="120" height="120">
 
+            <h1>Datos de usuario</h1>
 
+            <form>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"><br><br>
 
-                <h1>Datos de usuario de Usuario</h1>
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" id="correo" name="correo" placeholder="Escribe tu correo"><br><br>
+            </form>
 
-                <form>
+            <div class="botones">
+                <button onclick="window.location.href='metodo-actual.html'">
+                    Método de pago actual
+                </button>
 
-                    <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre"><br><br>
+                <button onclick="window.location.href='eliminar-metodo.html'">
+                    Eliminar método de pago
+                </button>
 
-                    <label for="correo">Correo electrónico:</label><br>
-                    <input type="email" id="correo" name="correo" placeholder="Escribe tu correo"><br><br>
+                <button onclick="window.location.href='verificar.html'">
+                    Verificar método de pago
+                </button>
+            </div>
 
+        </section>
+    </main>
 
-                </form>
-
-                <div class="botones">
-
-                    <button onclick="window.location.href='metodo-actual.html'">
-                        Método de pago actual
-                    </button>
-
-                    <button onclick="window.location.href='eliminar-metodo.html'">
-                        Eliminar método de pago
-                    </button>
-
-                    <button onclick="window.location.href='verificar.html'">
-                        Verificar método de pago
-                    </button>
-
-
-                </div>
-
-
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2026 TURTLE INC. Todos los derechos reservados.</p>
-        </footer>
+    <footer>
+        <p>&copy; 2026 TURTLE INC. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 

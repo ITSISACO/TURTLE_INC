@@ -172,27 +172,19 @@ footer{
 }
 
 .boton-carrito {
-    position: fixed;
-    top: 20px;
-    right: 25px;
-
-    background-color: #222;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Fondo transparente para integrarse a la barra */
     color: white;
-
-    padding: 10px 16px;
-
-    border: 2px solid #222;
-    border-radius: 5px;
-
+    font-size: 20px;               /* Tamaño ideal para el emoji */
+    padding: 8px 12px;
+    border-radius: 50%;            /* Redondeado tipo icono */
     text-decoration: none;
-    font-weight: bold;
-
     transition: 0.3s;
-
-    z-index: 1000;
 }
 
 .boton-carrito:hover {
-    background-color: #FFD700;
-    color: #222;
+    background-color: #ffd000;    /* Fondo amarillo al pasar el cursor */
+    transform: scale(1.1);         /* Ligero efecto de aumento */
 }

@@ -4,32 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medidas</title>
+    <title>Medidas Mujer</title>
     <link rel="stylesheet" href="../CSS/medidas.css">
 </head>
 
 <body>
     <header>
-        <h1>Medidas Mujer<h1>
-            <a href="carrito.html" class="boton-carrito">
-        🛒 Carrito
-    </a>
+        <h1>Medidas Mujer</h1>
     </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
 
             <a class="navbar-brand" href="inicio.html"> TURTLE INC</a>
 
-            </button>
-
             <div class="busqueda">
                 <input type="text" id="buscar" placeholder="Buscar...">
-                 <button onclick="buscarContenido()">🐢</button>
-         </div>
+                <button onclick="buscarContenido()">🐢</button>
+            </div>
 
             <div class="collapse navbar-collapse" id="menu">
-
-
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="ultimos-drops.html">Ultimos drops</a>
@@ -37,86 +30,83 @@
                     <li class="nav-item">
                         <a class="nav-link" href="caparazones.html">Caparazones</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="prendas.html">Prendas</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.html">Perfil</a>
                     </li>
+                    <!-- Carrito dentro del menú -->
+                    <li class="nav-item">
+                        <a href="carritotortugo.html" class="boton-carrito">🛒</a>
+                    </li>
                 </ul>
             </div>
+        </div>
     </nav>
 
-<section class="guia-medidas">
-    <div>
-        <img src="" alt="">
-    </div>
+    <a href="prendasfemeninas.html" onclick="if (history.length > 1) { history.back(); return false; }" class="volver">‹ Back</a>
 
-   <a href="prendasfemeninas.html" onclick="if (history.length > 1) { history.back(); return false; }" class="volver">‹ Back</a>
+    <section class="guia-medidas">
 
-<section class="guia-medidas">
+        <h2>GUÍA DE MEDIDAS</h2>
 
-    <h2>GUÍA DE MEDIDAS</h2>
+        <div class="imagen-guia">
+            <img src="../imagenes/medidas.PNG" alt="Guía de medidas">
+        </div>
 
-    <div class="imagen-guia">
-        <img src="../imagenes/medidas.PNG" alt="Guía de medidas">
-    </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Talla</th>
+                    <th>Ancho Pecho</th>
+                    <th>Longitud Manga</th>
+                    <th>Longitud Frente</th>
+                    <th>Hombro</th>
+                </tr>
+            </thead>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Talla</th>
-                <th>Ancho Pecho</th>
-                <th>Longitud Manga</th>
-                <th>Longitud Frente</th>
-                <th>Hombro</th>
-            </tr>
-        </thead>
+            <tbody>
+                <tr>
+                    <td>S</td>
+                    <td>35</td>
+                    <td>17</td>
+                    <td>38</td>
+                    <td>8.5</td>
+                </tr>
 
-        <tbody>
-            <tr>
-                <td>S</td>
-                <td>35</td>
-                <td>17</td>
-                <td>38</td>
-                <td>8.5</td>
-            </tr>
+                <tr>
+                    <td>M</td>
+                    <td>37</td>
+                    <td>18</td>
+                    <td>39.5</td>
+                    <td>9</td>
+                </tr>
 
-            <tr>
-                <td>M</td>
-                <td>37</td>
-                <td>18</td>
-                <td>39.5</td>
-                <td>9</td>
-            </tr>
+                <tr>
+                    <td>L</td>
+                    <td>39</td>
+                    <td>19</td>
+                    <td>41</td>
+                    <td>9.5</td>
+                </tr>
 
-            <tr>
-                <td>L</td>
-                <td>39</td>
-                <td>19</td>
-                <td>41</td>
-                <td>9.5</td>
-            </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>41</td>
+                    <td>20</td>
+                    <td>43</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
 
-            <tr>
-                <td>XL</td>
-                <td>41</td>
-                <td>20</td>
-                <td>43</td>
-                <td>10</td>
-            </tr>
-        </tbody>
+        </table>
 
-    </table>
+    </section>
 
-</section>
-
-</section>
-<footer>
-   &copy; 2026 TURTLE INC. Todos los derechos reservados.
+    <footer>
+        <p>&copy; 2026 TURTLE INC. Todos los derechos reservados.</p>
     </footer>
-</div>
 </body>
+
 </html>

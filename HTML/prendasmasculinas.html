@@ -1,128 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prendas Masculinas</title>
     <link rel="stylesheet" href="../CSS/prendasmasculinas.css">
 </head>
+
 <body>
     <header>
-    <h1>Prendas Masculinas</h1>
-    <a href="carrito.html" class="boton-carrito">
-        🛒 Carrito
-    </a>
-</header>
+        <h1>Prendas Masculinas</h1>
+    </header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             
-            
             <a class="navbar-brand" href="inicio.html"> TURTLE INC</a>
-        
-            </button>
 
             <div class="busqueda">
-    <input type="text" id="buscar" placeholder="Buscar...">
-    <button onclick="buscarContenido()">🐢</button>
-        </div>
+                <input type="text" id="buscar" placeholder="Buscar...">
+                <button onclick="buscarContenido()">🐢</button>
+            </div>
             
             <div class="collapse navbar-collapse" id="menu">
-
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="ultimos-drops.html">Ultimos drops</a>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="caparazones.html">Caparazones</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="prendas.html">Prendas</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.html">Perfil</a>
                     </li>
+                    <!-- Carrito dentro de la barra de navegación -->
+                    <li class="nav-item">
+                        <a href="carritotortugo.html" class="boton-carrito">🛒</a>
+                    </li>
                 </ul>
-                
             </div>
+        </div>
     </nav> 
 
-       <section class="productos">
+    <section class="productos">
+        <!-- Fila 1 (Primeras 4 prendas) -->
+        <div class="producto">
+            <a href="camisaprueba1.html">
+                <img src="../imagenes/camisahombre.png" alt="Camiseta Hombre Turtle Inc">
+                <h3>Camiseta Hombre Turtle Inc</h3>
+                <p class="precio">$199.000</p>
+            </a>
+        </div>
 
-    <!-- Fila 1 (Primeras 4 prendas) -->
-    <div class="producto">
-        <a href="camisaprueba1.html">
-            <img src="../imagenes/camisahombre.png" alt="Camiseta Hombre Turtle Inc">
-            <h3>Camiseta Hombre Turtle Inc</h3>
-            <p class="precio">$199.000</p>
-        </a>
-    </div>
+        <div class="producto">
+            <a href="buzohombre.html">
+                <img src="../imagenes/buso 1.png" alt="Buzo Turtle Inc">
+                <h3>Buzo Turtle Inc</h3>
+                <p class="precio">$259.000</p>
+            </a>
+        </div>
 
-    <div class="producto">
-        <a href="buzohombre.html">
-            <img src="../imagenes/buso 1.png" alt="Buzo Turtle Inc">
-            <h3>Buzo Turtle Inc</h3>
-            <p class="precio">$259.000</p>
-        </a>
-    </div>
+        <div class="producto">
+            <a href="zapatoshombre.html">
+                <img src="../imagenes/zapatos2.png" alt="Zapatos Hombre Turtle Inc">
+                <h3>Zapatos Hombre Turtle Inc</h3>
+                <p class="precio">$299.000</p>
+            </a>
+        </div>
 
-    <div class="producto">
-        <a href="zapatoshombre.html">
-            <img src="../imagenes/zapatos2.png" alt="Zapatos Hombre Turtle Inc">
-            <h3>Zapatos Hombre Turtle Inc</h3>
-            <p class="precio">$299.000</p>
-        </a>
-    </div>
+        <div class="producto">
+            <a href="#">
+                <img src="../imagenes/camisahombre.png" alt="Chaqueta Turtle Inc">
+                <h3>Conjunto Turtle Inc</h3>
+                <p class="precio">$379.000</p>
+            </a>
+        </div>
 
-    <div class="producto">
-        <a href="#">
-            <img src="../imagenes/camisahombre.png" alt="Chaqueta Turtle Inc">
-            <h3>Conjunto Turtle Inc</h3>
-            <p class="precio">$379.000</p>
-        </a>
-    </div>
+        <!-- Fila 2 (Siguientes 4 prendas) -->
+        <div class="producto">
+            <a href="#">
+                <img src="../imagenes/buso 1.png" alt="Pantalón Turtle Inc">
+                <h3>Pantalón Turtle Inc</h3>
+                <p class="precio">$180.000</p>
+            </a>
+        </div>
 
-    <!-- Fila 2 (Siguientes 4 prendas) -->
-    <div class="producto">
-        <a href="#">
-            <img src="../imagenes/buso 1.png" alt="Pantalón Turtle Inc">
-            <h3>Pantalón Turtle Inc</h3>
-            <p class="precio">$180.000</p>
-        </a>
-    </div>
+        <div class="producto">
+            <a href="#">
+                <img src="../imagenes/camisahombre.png" alt="Camisa Manga Larga Turtle Inc">
+                <h3>Camisa Manga Larga</h3>
+                <p class="precio">$210.000</p>
+            </a>
+        </div>
 
-    <div class="producto">
-        <a href="#">
-            <img src="../imagenes/camisahombre.png" alt="Camisa Manga Larga Turtle Inc">
-            <h3>Camisa Manga Larga</h3>
-            <p class="precio">$210.000</p>
-        </a>
-    </div>
+        <div class="producto">
+            <a href="#">
+                <img src="../imagenes/buso 1.png" alt="Buzo Capucha Turtle Inc">
+                <h3>Buzo Capucha Turtle Inc</h3>
+                <p class="precio">$270.000</p>
+            </a>
+        </div>
 
-    <div class="producto">
-        <a href="#">
-            <img src="../imagenes/buso 1.png" alt="Buzo Capucha Turtle Inc">
-            <h3>Buzo Capucha Turtle Inc</h3>
-            <p class="precio">$270.000</p>
-        </a>
-    </div>
+        <div class="producto">
+            <a href="#">
+                <img src="../imagenes/zapatos.png" alt="Tenis Casuales Turtle Inc">
+                <h3>Tenis Casuales Turtle Inc</h3>
+                <p class="precio">$310.000</p>
+            </a>
+        </div>
+    </section>
 
-    <div class="producto">
-        <a href="#">
-            <img src="../imagenes/zapatos.png" alt="Tenis Casuales Turtle Inc">
-            <h3>Tenis Casuales Turtle Inc</h3>
-            <p class="precio">$310.000</p>
-        </a>
-    </div>
-
-</section>
-        
-
-<div class="info">
-<footer>
-   &copy; 2026 TURTLE INC. Todos los derechos reservados.
+    <footer>
+        <p>&copy; 2026 TURTLE INC. Todos los derechos reservados.</p>
     </footer>
-</div>
-
 </body>
+
+</html>
