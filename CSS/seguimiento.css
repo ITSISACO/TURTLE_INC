@@ -1,0 +1,874 @@
+/* =========================================
+   TURTLE INC - SEGUIMIENTO
+   DISEÑO PARA COMPUTADOR
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef5f1,
+            #f9fbfa
+        );
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    color: #46535e;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.telefono {
+    width: 100%;
+    min-height: 100vh;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BARRA SUPERIOR
+========================================= */
+
+.barra-superior {
+    width: 100%;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    border-bottom: 1px solid #edf1ef;
+
+    background: white;
+}
+
+.barra-superior a {
+    color: #7d898f;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+.barra-superior a:hover {
+    color: #35a976;
+
+    transform: translateX(-3px);
+}
+
+.barra-superior span {
+    color: #9aa4a9;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contenido {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 45px 50px 35px;
+
+    flex: 1;
+}
+
+
+/* =========================================
+   MARCA
+========================================= */
+
+.tortuga {
+    font-size: 35px;
+
+    margin-bottom: 5px;
+}
+
+.marca {
+    color: #35a976;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+h1 {
+    color: #46535e;
+
+    font-size: 52px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+}
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+
+    height: 5px;
+
+    background: #43ad7c;
+
+    border-radius: 10px;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================
+   MAPA
+========================================= */
+
+.mapa {
+    width: 100%;
+
+    height: 350px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background-color: #edf2f3;
+
+    box-shadow:
+        inset 0 0 0 1px #e2e8e6;
+
+    background-image:
+        linear-gradient(
+            30deg,
+            transparent 43%,
+            white 44%,
+            white 47%,
+            transparent 48%
+        ),
+        linear-gradient(
+            125deg,
+            transparent 30%,
+            white 31%,
+            white 34%,
+            transparent 35%
+        ),
+        linear-gradient(
+            70deg,
+            transparent 59%,
+            white 60%,
+            white 63%,
+            transparent 64%
+        ),
+        linear-gradient(
+            155deg,
+            transparent 68%,
+            white 69%,
+            white 72%,
+            transparent 73%
+        );
+}
+
+
+/* =========================================
+   RUTA DEL PEDIDO
+========================================= */
+
+.ruta {
+    position: absolute;
+
+    width: 65%;
+
+    height: 5px;
+
+    background: #43ad7c;
+
+    border-radius: 20px;
+
+    left: 15%;
+
+    top: 58%;
+
+    transform: rotate(-12deg);
+
+    box-shadow:
+        0 3px 8px rgba(67, 173, 124, 0.25);
+}
+
+
+/* =========================================
+   PUNTOS DEL MAPA
+========================================= */
+
+.punto {
+    position: absolute;
+
+    width: 14px;
+
+    height: 14px;
+
+    background: white;
+
+    border: 4px solid #43ad7c;
+
+    border-radius: 50%;
+
+    z-index: 2;
+}
+
+.p1 {
+    left: 15%;
+
+    top: 66%;
+}
+
+.p2 {
+    left: 47%;
+
+    top: 59%;
+}
+
+.p3 {
+    right: 18%;
+
+    top: 51%;
+}
+
+
+/* =========================================
+   PIN
+========================================= */
+
+.pin {
+    position: absolute;
+
+    left: 49%;
+
+    top: 51%;
+
+    width: 34px;
+
+    height: 34px;
+
+    background: #43ad7c;
+
+    color: white;
+
+    border-radius: 50% 50% 50% 0;
+
+    transform: rotate(-45deg);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 5;
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.18);
+}
+
+.pin::first-letter {
+    transform: rotate(45deg);
+}
+
+
+/* =========================================
+   ESTADO DEL PEDIDO
+========================================= */
+
+.estado {
+    margin-top: 28px;
+
+    padding: 20px 25px;
+
+    border-radius: 18px;
+
+    background: #f5faf7;
+
+    border: 1px solid #e2eee7;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.estado strong {
+    display: block;
+
+    color: #46535e;
+
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+.estado small {
+    color: #8d999f;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   INDICADOR
+========================================= */
+
+.pulso {
+    width: 15px;
+
+    height: 15px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #43ad7c;
+
+    box-shadow:
+        0 0 0 7px #dff3e8;
+}
+
+.pulso.completo {
+    background: #299367;
+
+    box-shadow:
+        0 0 0 7px #d9f0e4;
+}
+
+
+/* =========================================
+   PROGRESO
+========================================= */
+
+.progreso {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    margin-top: 35px;
+
+    padding: 0 35px;
+}
+
+.progreso .linea {
+    position: absolute;
+
+    top: 18px;
+
+    left: 65px;
+
+    right: 65px;
+
+    height: 4px;
+
+    background: #dce8e2;
+
+    border-radius: 10px;
+
+    z-index: 0;
+}
+
+.paso {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #9ba5aa;
+
+    text-align: center;
+}
+
+.paso span {
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: white;
+
+    border: 3px solid #dce5e1;
+
+    color: #9ba5aa;
+
+    font-weight: bold;
+
+    font-size: 15px;
+}
+
+.paso small {
+    font-size: 12px;
+
+    line-height: 1.3;
+}
+
+.paso.activo {
+    color: #35a976;
+}
+
+.paso.activo span {
+    background: #43ad7c;
+
+    border-color: #43ad7c;
+
+    color: white;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.llego {
+    display: block;
+
+    width: 330px;
+
+    max-width: 100%;
+
+    height: 55px;
+
+    margin: 35px auto 12px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #46535e,
+            #34414a
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 22px rgba(52, 65, 74, 0.2);
+
+    transition: 0.2s;
+}
+
+.llego:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #43ad7c,
+            #299367
+        );
+
+    transform: translateY(-2px);
+}
+
+.volver-pedido {
+    display: block;
+
+    margin: 0 auto;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #89959a;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.volver-pedido:hover {
+    color: #35a976;
+}
+
+
+/* =========================================
+   MENÚ INFERIOR
+========================================= */
+
+.nav {
+    width: 100%;
+
+    min-height: 85px;
+
+    border-top: 1px solid #edf1ef;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 150px;
+}
+
+.nav > div {
+    min-width: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    color: #7d898f;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.nav > div:hover {
+    color: #35a976;
+
+    transform: translateY(-2px);
+}
+
+.nav small {
+    font-size: 11px;
+
+    font-family: Arial, sans-serif;
+}
+
+.carrito {
+    color: #46535e !important;
+}
+
+
+/* =========================================
+   MODAL FINAL
+========================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(40, 52, 58, 0.55);
+
+    backdrop-filter: blur(7px);
+}
+
+.modal.oculto {
+    display: none;
+}
+
+
+/* =========================================
+   TARJETA DE CELEBRACIÓN
+========================================= */
+
+.celebracion {
+    width: 420px;
+
+    max-width: 100%;
+
+    background: white;
+
+    border-radius: 28px;
+
+    padding: 40px 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+
+    animation: aparecer 0.35s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   CHECK
+========================================= */
+
+.check {
+    width: 80px;
+
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e2f6eb;
+
+    color: #35a976;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 0 0 10px #f1faf5;
+}
+
+.celebracion .marca {
+    margin-bottom: 10px;
+}
+
+.celebracion h2 {
+    color: #46535e;
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+.celebracion p {
+    color: #89959f;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.celebracion p strong {
+    color: #35a976;
+}
+
+
+/* =========================================
+   BOTÓN ACEPTAR
+========================================= */
+
+.celebracion button {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #46535e;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.celebracion button:hover {
+    background: #35a976;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .contenido {
+        padding: 35px 30px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .nav {
+        gap: 80px;
+    }
+
+    .mapa {
+        height: 300px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 500px) {
+
+    .barra-superior {
+        height: 55px;
+
+        padding: 0 20px;
+    }
+
+    .contenido {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .mapa {
+        height: 230px;
+
+        border-radius: 18px;
+    }
+
+    .estado {
+        padding: 16px;
+    }
+
+    .estado strong {
+        font-size: 16px;
+    }
+
+    .progreso {
+        padding: 0;
+    }
+
+    .progreso .linea {
+        left: 30px;
+        right: 30px;
+    }
+
+    .nav {
+        gap: 40px;
+    }
+
+    .celebracion {
+        padding: 32px 22px;
+    }
+}
