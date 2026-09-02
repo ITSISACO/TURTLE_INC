@@ -1,90 +1,520 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos para el pedido</title>
-    <link rel="stylesheet" href="../CSS/pedido.css">
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Datos para el pedido | Turtle Inc</title>
+
+<link
+    rel="stylesheet"
+    href="../CSS/pedido.css"
+>
+
+<style>
+
+    /* Mensaje cuando NO quiere seguimiento */
+
+    .mensaje-no-seguimiento {
+        position: fixed;
+        inset: 0;
+        background: rgba(35, 45, 50, 0.60);
+        backdrop-filter: blur(6px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .mensaje-no-seguimiento.oculto {
+        display: none;
+    }
+
+    .tarjeta-mensaje {
+        width: 360px;
+        max-width: 100%;
+        background: white;
+        border-radius: 28px;
+        padding: 35px 25px;
+        text-align: center;
+        box-shadow:
+            0 25px 70px rgba(0, 0, 0, 0.25);
+        animation: aparecer .35s ease;
+    }
+
+    @keyframes aparecer {
+
+        from {
+            opacity: 0;
+            transform:
+                translateY(25px)
+                scale(.94);
+        }
+
+        to {
+            opacity: 1;
+            transform:
+                translateY(0)
+                scale(1);
+        }
+    }
+
+    .icono-mensaje {
+        width: 75px;
+        height: 75px;
+        margin: 0 auto 18px;
+        border-radius: 50%;
+        background: #e3f6eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 38px;
+    }
+
+    .tarjeta-mensaje .marca {
+        color: #35a976;
+        font-size: 10px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-bottom: 8px;
+    }
+
+    .tarjeta-mensaje h2 {
+        color: #46535e;
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .tarjeta-mensaje p {
+        color: #89959d;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .tarjeta-mensaje p strong {
+        color: #35a976;
+    }
+
+    .boton-mensaje {
+        width: 100%;
+        margin-top: 23px;
+        padding: 14px;
+        border: none;
+        border-radius: 13px;
+        background: #46535e;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .boton-mensaje:hover {
+        background: #35414a;
+        transform: translateY(-2px);
+    }
+
+</style>
+```
+
 </head>
 
 <body>
 
-    <main class="contenedor">
+```
+<main class="contenedor">
 
-        <a href="#" class="volver">‹ Back</a>
 
-        <h1>Datos para el pedido</h1>
+    <!-- BOTÓN BACK -->
 
-        <form action="verificar.html">
+    <a href="inicio.html" class="volver">
+        ‹ Back
+    </a>
 
-            <div class="campo">
-                <label for="direccion">Dirección</label>
-                <input 
-                    type="text" 
-                    id="direccion" 
-                    name="direccion"
-                    required
-                >
+
+    <h1>
+        Datos para el pedido
+    </h1>
+
+
+    <form id="formPedido">
+
+
+        <!-- DIRECCIÓN -->
+
+        <div class="campo">
+
+            <label for="direccion">
+                Dirección
+            </label>
+
+            <input
+                type="text"
+                id="direccion"
+                name="direccion"
+                placeholder="Ingresa tu dirección"
+                required
+            >
+
+        </div>
+
+
+        <!-- TELÉFONO -->
+
+        <div class="campo">
+
+            <label for="telefono">
+                Número de teléfono
+            </label>
+
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Ingresa tu teléfono"
+                required
+            >
+
+        </div>
+
+
+        <!-- API -->
+
+        <div class="campo api">
+
+            <label for="api">
+                API <span>(opcional)</span>
+            </label>
+
+            <input
+                type="text"
+                id="api"
+                name="api"
+                placeholder="Opcional"
+            >
+
+        </div>
+
+
+        <!-- AVISO -->
+
+        <div class="opcion">
+
+            <h2>
+                Avisar cuando mi pedido sea enviado
+            </h2>
+
+
+            <div class="botones">
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="aviso"
+                        value="si"
+                        required
+                    >
+
+                    <span>
+                        Sí
+                    </span>
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="aviso"
+                        value="no"
+                    >
+
+                    <span>
+                        No
+                    </span>
+
+                </label>
+
             </div>
 
-            <div class="campo">
-                <label for="telefono">Número de teléfono</label>
-                <input 
-                    type="tel" 
-                    id="telefono" 
-                    name="telefono"
-                    required
-                >
+        </div>
+
+
+        <!-- SEGUIMIENTO -->
+
+        <div class="opcion">
+
+            <h2>
+                Seguir mi pedido
+            </h2>
+
+
+            <div class="botones">
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="seguimiento"
+                        value="si"
+                        required
+                    >
+
+                    <span>
+                        Sí
+                    </span>
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="seguimiento"
+                        value="no"
+                    >
+
+                    <span>
+                        No
+                    </span>
+
+                </label>
+
             </div>
 
-            <div class="campo api">
-                <label for="api">API <span>(opcional)</span></label>
-                <input 
-                    type="text" 
-                    id="api" 
-                    name="api"
-                >
-            </div>
+        </div>
 
-            <div class="opcion">
-                <h2>Avisar cuando mi pedido sea enviado</h2>
 
-                <div class="botones">
-                    <label>
-                        <input type="radio" name="aviso" value="si" required>
-                        <span>Sí</span>
-                    </label>
+        <!-- CONTINUAR -->
 
-                    <label>
-                        <input type="radio" name="aviso" value="no">
-                        <span>No</span>
-                    </label>
-                </div>
-            </div>
+        <button
+            type="submit"
+            class="continuar"
+        >
 
-            <div class="opcion">
-                <h2>Seguir mi pedido</h2>
+            Continuar
 
-                <div class="botones">
-                    <label>
-                        <input type="radio" name="seguimiento" value="si" required>
-                        <span>Sí</span>
-                    </label>
+        </button>
 
-                    <label>
-                        <input type="radio" name="seguimiento" value="no">
-                        <span>No</span>
-                    </label>
-                </div>
-            </div>
 
-            <button type="submit" class="continuar">
-                Continuar
-            </button>
+    </form>
 
-        </form>
 
-    </main>
+</main>
+
+
+
+<!-- ==================================
+     MENSAJE SI ELIGE NO
+================================== -->
+
+<div
+    id="mensajeNo"
+    class="mensaje-no-seguimiento oculto"
+>
+
+    <div class="tarjeta-mensaje">
+
+
+        <div class="icono-mensaje">
+            🐢
+        </div>
+
+
+        <p class="marca">
+            TURTLE INC
+        </p>
+
+
+        <h2>
+            ¡Pedido confirmado!
+        </h2>
+
+
+        <p>
+
+            Esperamos que tu pedido
+
+            <br>
+
+            llegue bien hasta tu puerta.
+
+            <br><br>
+
+            <strong>
+                ¡Gracias por confiar en nosotros!
+            </strong>
+
+        </p>
+
+
+        <button
+            class="boton-mensaje"
+            id="cerrarMensaje"
+            type="button"
+        >
+
+            Aceptar
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+
+    /* ==================================
+       FORMULARIO
+    ================================== */
+
+    const formulario =
+        document.getElementById("formPedido");
+
+
+    formulario.addEventListener(
+        "submit",
+        function(event) {
+
+
+            /*
+                Evitamos que el formulario
+                recargue la página
+            */
+
+            event.preventDefault();
+
+
+            /* Obtener datos */
+
+            const direccion =
+                document.getElementById(
+                    "direccion"
+                ).value.trim();
+
+
+            const telefono =
+                document.getElementById(
+                    "telefono"
+                ).value.trim();
+
+
+            const api =
+                document.getElementById(
+                    "api"
+                ).value.trim();
+
+
+            const aviso =
+                document.querySelector(
+                    'input[name="aviso"]:checked'
+                ).value;
+
+
+            const seguimiento =
+                document.querySelector(
+                    'input[name="seguimiento"]:checked'
+                ).value;
+
+
+
+            /* ==================================
+               GUARDAR DATOS
+            ================================== */
+
+            const datosPedido = {
+
+                direccion: direccion,
+
+                telefono: telefono,
+
+                api: api,
+
+                aviso: aviso,
+
+                seguimiento: seguimiento
+
+            };
+
+
+            localStorage.setItem(
+                "turtlePedido",
+                JSON.stringify(datosPedido)
+            );
+
+
+
+            /* ==================================
+               SI QUIERE SEGUIMIENTO
+            ================================== */
+
+            if (seguimiento === "si") {
+
+                window.location.href =
+                    "seguimiento.html";
+
+                return;
+
+            }
+
+
+
+            /* ==================================
+               SI NO QUIERE SEGUIMIENTO
+            ================================== */
+
+            if (seguimiento === "no") {
+
+                document
+                    .getElementById("mensajeNo")
+                    .classList
+                    .remove("oculto");
+
+            }
+
+        }
+    );
+
+
+
+    /* ==================================
+       CERRAR MENSAJE
+    ================================== */
+
+    document
+        .getElementById("cerrarMensaje")
+        .addEventListener(
+            "click",
+            function() {
+
+                document
+                    .getElementById("mensajeNo")
+                    .classList
+                    .add("oculto");
+
+            }
+        );
+
+
+</script>
+```
 
 </body>
+
 </html>
