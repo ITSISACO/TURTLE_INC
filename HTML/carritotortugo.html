@@ -8,24 +8,25 @@
 </head>
 <body>
     <header>
+<<<<<<< HEAD
+        <h1>Carrito de Compras</h1>
+    </header>
+
+=======
     <h1>Carrito de Compras</h1>
    
 </header>
+>>>>>>> b8937361722f0364602bbbd22bfb288a61a050c3
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            
-            
             <a class="navbar-brand" href="inicio.html"> TURTLE INC</a>
-        
-            </button>
 
             <div class="busqueda">
-    <input type="text" id="buscar" placeholder="Buscar...">
-    <button onclick="buscarContenido()">🐢</button>
-        </div>
+                <input type="text" id="buscar" placeholder="Buscar...">
+                <button onclick="buscarContenido()">🐢</button>
+            </div>
             
             <div class="collapse navbar-collapse" id="menu">
-
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" href="ultimos-drops.html">Ultimos drops</a>
@@ -33,198 +34,127 @@
                      <li class="nav-item">
                         <a class="nav-link" href="caparazones.html">Caparazones</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="prendas.html">Prendas</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="perfil.html">Perfil</a>
                     </li>
                 </ul>
-                
             </div>
+        </div>
     </nav> 
-     
+      
     <main class="carrito">
-<a href="prendas.html" class="volver">‹ Back</a>
+        <a href="prendas.html" class="volver">‹ Back</a>
         <h2>Mis productos</h2>
-
 
         <!-- PRODUCTO 1 -->
         <div class="producto-carrito">
-
-            <img
-                src="../imagenes/camisahombre.png"
-                alt="Camiseta Turtle INC"
-            >
-
+            <img src="../imagenes/camisahombre.png" alt="Camiseta Turtle INC">
             <div class="producto-info">
-
                 <h3>Camiseta Turtle INC</h3>
-
-                <p>
-                    Camiseta negra edición especial
-                </p>
-
+                <p>Camiseta negra edición especial</p>
             </div>
-
-            <div class="precio">
-                $199.000
-            </div>
-
+            <div class="precio">$199.000</div>
             <div class="cantidad">
-
-                <button onclick="cambiarCantidad(0, -1)">
-                    -
-                </button>
-
-                <span id="cantidad0">
-                    1
-                </span>
-
-                <button onclick="cambiarCantidad(0, 1)">
-                    +
-                </button>
-
+                <button onclick="cambiarCantidad(0, -1)">-</button>
+                <span id="cantidad0">1</span>
+                <button onclick="cambiarCantidad(0, 1)">+</button>
             </div>
-
-            <button
-                class="eliminar"
-                onclick="eliminarProducto(this)"
-            >
-                x
-            </button>
-
+            <button class="eliminar" onclick="eliminarProducto(this, 0)">x</button>
         </div>
-
 
         <!-- PRODUCTO 2 -->
         <div class="producto-carrito">
-
-            <img
-                src="../imagenes/topmujer.png"
-                alt="Hoodie Turtle INC"
-            >
-
+            <img src="../imagenes/topmujer.png" alt="Hoodie Turtle INC">
             <div class="producto-info">
-
                 <h3>Hoodie Turtle INC</h3>
-
-                <p>
-                    Hoodie edición limitada
-                </p>
-
+                <p>Hoodie edición limitada</p>
             </div>
-
-            <div class="precio">
-                $129.000
-            </div>
-
+            <div class="precio">$129.000</div>
             <div class="cantidad">
-
-                <button onclick="cambiarCantidad(1, -1)">
-                    −
-                </button>
-
-                <span id="cantidad1">
-                    1
-                </span>
-
-                <button onclick="cambiarCantidad(1, 1)">
-                    +
-                </button>
-
+                <button onclick="cambiarCantidad(1, -1)">−</button>
+                <span id="cantidad1">1</span>
+                <button onclick="cambiarCantidad(1, 1)">+</button>
             </div>
-
-            <button
-                class="eliminar"
-                onclick="eliminarProducto(this)"
-            >
-                x
-            </button>
-
+            <button class="eliminar" onclick="eliminarProducto(this, 1)">x</button>
         </div>
-
 
         <!-- TOTAL -->
         <div class="total">
-
-            Total:
-            <strong id="total">
-                $140.000
-            </strong>
-
+            Total: <strong id="total">$328.000</strong>
         </div>
 
-
-        <!-- BOTÓN DE COMPRA -->
-        <a href="compra-finalizada.html">
-            <button
-                class="comprar"
-                
-            >
+        <!-- BOTÓN DE COMPRA CONECTADO -->
+        <a href="pedido.html" onclick="guardarCarritoAntesDeComprar(event)">
+            <button class="comprar">
                 Finalizar compra 🐢
             </button>
         </a>
-
     </main>
-
 
     <!-- JAVASCRIPT -->
     <script>
-
         let precios = [199000, 129000];
-
         let cantidades = [1, 1];
 
+        // Calcular total inicial al cargar la página
+        document.addEventListener("DOMContentLoaded", function() {
+            calcularTotal();
+        });
 
         function cambiarCantidad(producto, cambio) {
-
             cantidades[producto] += cambio;
 
             if (cantidades[producto] < 1) {
-
                 cantidades[producto] = 1;
-
             }
 
-            document.getElementById(
-                "cantidad" + producto
-            ).innerText = cantidades[producto];
-
+            document.getElementById("cantidad" + producto).innerText = cantidades[producto];
             calcularTotal();
         }
-
 
         function calcularTotal() {
-
             let total = 0;
-
             for (let i = 0; i < precios.length; i++) {
+                if (cantidades[i] > 0) {
+                    total += precios[i] * cantidades[i];
+                }
+            }
+            document.getElementById("total").innerText = "$" + total.toLocaleString("es-CO");
+            return total;
+        }
 
-                total += precios[i] * cantidades[i];
+        function eliminarProducto(boton, indice) {
+            let producto = boton.parentElement;
+            cantidades[indice] = 0; // Desactivar cantidad de este producto
+            producto.remove();
+            calcularTotal();
+        }
 
+        /* FUNCIÓN PARA GUARDAR Y REDIRIGIR */
+        function guardarCarritoAntesDeComprar(event) {
+            const totalActual = calcularTotal();
+
+            // Si el carrito está vacío (total es 0)
+            if (totalActual === 0) {
+                event.preventDefault();
+                alert("Tu carrito está vacío. Agrega productos antes de continuar.");
+                return;
             }
 
-            document.getElementById("total").innerText =
-                "$" + total.toLocaleString("es-CO");
-
+            // Guardar total y productos en localStorage
+            const resumenCarrito = {
+                total: totalActual,
+                cantidades: cantidades
+            };
+            
+            localStorage.setItem("carritoTurtle", JSON.stringify(resumenCarrito));
+            
+            // Si el nombre del archivo de la vista de envío no es "pedido.html", 
+            // ajusta el atributo href en el HTML de arriba.
         }
-
-
-        function eliminarProducto(boton) {
-
-            let producto = boton.parentElement;
-
-            producto.remove();
-
-            calcularTotal();
-
-        }
-
     </script>
-
 </body>
-
 </html>

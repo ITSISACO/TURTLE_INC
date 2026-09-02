@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Seguimiento de tu pedido | Turtle Inc
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../CSS/seguimiento.css"
+    >
+</head>
+
+
+<body>
+
+    <main class="telefono">
+
+        <div class="barra-superior">
+
+            <a href="pedido.html">
+                ‹ Back
+            </a>
+
+            <span>
+                9:41
+            </span>
+
+        </div>
+
+
+        <section class="contenido">
+
+            <div class="tortuga">
+                🐢
+            </div>
+
+
+            <p class="marca">
+                TURTLE INC
+            </p>
+
+
+            <h1>
+                SEGUIMIENTO<br>
+                DE TU PEDIDO
+            </h1>
+
+
+            <!-- MAPA -->
+
+            <div
+                class="mapa"
+                aria-label="Mapa de seguimiento"
+            >
+
+                <div class="ruta"></div>
+
+                <div class="pin">
+                    ●
+                </div>
+
+                <div class="punto p1"></div>
+                <div class="punto p2"></div>
+                <div class="punto p3"></div>
+
+            </div>
+
+
+            <!-- ESTADO -->
+
+            <div class="estado">
+
+                <span
+                    class="pulso"
+                    id="pulso"
+                ></span>
+
+
+                <div>
+
+                    <strong id="estadoTexto">
+                        Tu pedido está en camino
+                    </strong>
+
+
+                    <small id="direccionTexto">
+                        Preparando la entrega...
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESO -->
+
+            <div class="progreso">
+
+                <div class="linea"></div>
+
+
+                <div class="paso activo">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <small>
+                        Pedido<br>
+                        confirmado
+                    </small>
+
+                </div>
+
+
+                <div class="paso activo">
+
+                    <span>
+                        ✓
+                    </span>
+
+                    <small>
+                        En camino
+                    </small>
+
+                </div>
+
+
+                <div class="paso">
+
+                    <span>
+                        3
+                    </span>
+
+                    <small>
+                        Entregado
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTÓN -->
+
+            <button
+                id="llegoBtn"
+                class="llego"
+            >
+                YA LLEGÓ MI PEDIDO
+            </button>
+
+
+            <button
+                class="volver-pedido"
+                onclick="location.href='pedido.html'"
+            >
+                ← Volver a mis datos
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- MENSAJE FINAL -->
+
+    <div
+        id="mensajeFinal"
+        class="modal oculto"
+    >
+
+        <div class="celebracion">
+
+            <div class="check">
+                ✓
+            </div>
+
+
+            <p class="marca">
+                TURTLE INC
+            </p>
+
+
+            <h2>
+                ¡Pedido entregado!
+            </h2>
+
+
+            <p>
+                Gracias por confiar en nosotros,
+
+                <br>
+
+                esperamos te guste tu pedido
+
+                <br>
+
+                <strong>
+                    Turtle Inc
+                </strong>
+
+                🐢
+            </p>
+
+
+            <!-- ESTE BOTÓN TE LLEVA A INICIO.HTML -->
+
+            <button onclick="cerrarMensaje()">
+                Aceptar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Recuperamos los datos guardados
+        const datos = JSON.parse(
+            localStorage.getItem("turtlePedido") || "{}"
+        );
+
+
+        // Mostramos la dirección
+        if (datos.direccion) {
+
+            document.getElementById(
+                "direccionTexto"
+            ).textContent =
+                "Entregando en: " +
+                datos.direccion;
+
+        }
+
+
+        // Botón YA LLEGÓ
+        document
+            .getElementById("llegoBtn")
+            .addEventListener("click", function() {
+
+
+                // Cambiar estado
+                document.getElementById(
+                    "estadoTexto"
+                ).textContent =
+                    "¡Tu pedido ya llegó!";
+
+
+                document.getElementById(
+                    "estadoTexto"
+                ).style.color =
+                    "#299367";
+
+
+                // Activar último paso
+                document
+                    .querySelectorAll(".paso")[2]
+                    .classList.add("activo");
+
+
+                // Cambiar indicador
+                document
+                    .getElementById("pulso")
+                    .classList.add("completo");
+
+
+                // Mostrar mensaje
+                document
+                    .getElementById("mensajeFinal")
+                    .classList.remove("oculto");
+
+            });
+
+
+        // BOTÓN ACEPTAR
+        // Borra el pedido guardado y vuelve al inicio
+        function cerrarMensaje() {
+
+            // Borrar datos del pedido anterior
+            localStorage.removeItem("turtlePedido");
+
+            // Ir a la página de inicio
+            window.location.href = "inicio.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

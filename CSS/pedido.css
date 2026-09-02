@@ -1,3 +1,7 @@
+/* =========================================
+   TURTLE INC - DATOS PARA EL PEDIDO
+========================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,147 +10,491 @@
 
 body {
     min-height: 100vh;
-    background: #f5f5f5;
-    font-family: 'Comic Neue', cursive;
-    color: #34404d;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef5f1 0%,
+            #f8faf9 50%,
+            #e8f2ed 100%
+        );
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    color: #46535e;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 40px 20px;
 }
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
 
 .contenedor {
     width: 100%;
-    max-width: 500px;
-    min-height: 650px;
+    max-width: 650px;
+
+    min-height: auto;
 
     background: white;
-    padding: 25px 40px 35px;
 
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 40px 55px 45px;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.12);
+
+    border: 1px solid #e5eee9;
+
+    position: relative;
+
+    overflow: hidden;
 }
+
+
+/* decoración */
+
+.contenedor::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: #e8f6ef;
+
+    top: -90px;
+    right: -70px;
+
+    z-index: 0;
+}
+
+.contenedor::after {
+    content: "🐢";
+
+    position: absolute;
+
+    font-size: 45px;
+
+    top: 25px;
+    right: 35px;
+
+    z-index: 1;
+
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   VOLVER
+========================================= */
 
 .volver {
-    display: block;
-    color: #777;
+    display: inline-block;
+
+    color: #8a969c;
+
     text-decoration: none;
+
     font-family: Arial, sans-serif;
+
     font-size: 14px;
-    margin-bottom: 8px;
+
+    margin-bottom: 18px;
+
+    transition: 0.2s;
+
+    position: relative;
+
+    z-index: 2;
 }
+
+.volver:hover {
+    color: #35a976;
+
+    transform: translateX(-3px);
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
 
 h1 {
-    font-size: 27px;
-    font-weight: 700;
-    margin-bottom: 10px;
+    position: relative;
+
+    z-index: 2;
+
+    color: #46535e;
+
+    font-size: 38px;
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 30px;
 }
 
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 65px;
+
+    height: 5px;
+
+    margin-top: 13px;
+
+    border-radius: 10px;
+
+    background: #43ad7c;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
 .campo {
-    margin-top: 28px;
+    margin-top: 24px;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .campo label {
     display: block;
-    font-size: 18px;
+
+    color: #46535e;
+
+    font-size: 16px;
+
     font-weight: bold;
-    margin-bottom: 7px;
+
+    margin-bottom: 8px;
 }
 
 .campo span {
+    color: #9aa4a9;
+
+    font-size: 13px;
+
     font-weight: normal;
 }
 
+
+/* INPUTS */
+
 .campo input {
     width: 100%;
-    height: 42px;
 
-    border: none;
-    border-bottom: 2px solid #333;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 2px solid #dce5e1;
+
+    border-radius: 12px;
 
     outline: none;
+
     font-family: inherit;
-    font-size: 17px;
-    background: transparent;
+
+    font-size: 16px;
+
+    color: #46535e;
+
+    background: #fafcfb;
+
+    transition: all 0.2s ease;
+}
+
+.campo input::placeholder {
+    color: #b2babb;
+}
+
+.campo input:hover {
+    border-color: #b9d9ca;
 }
 
 .campo input:focus {
-    border-bottom: 3px solid #34404d;
+    background: white;
+
+    border-color: #43ad7c;
+
+    box-shadow:
+        0 0 0 4px #e3f5eb;
 }
+
+
+/* =========================================
+   API
+========================================= */
 
 .api {
-    margin-top: 25px;
-    max-width: 150px;
+    max-width: 100%;
 }
 
+
+/* =========================================
+   OPCIONES
+========================================= */
+
 .opcion {
-    margin-top: 28px;
+    margin-top: 30px;
+
+    padding: 20px;
+
+    border-radius: 17px;
+
+    background: #f7faf8;
+
+    border: 1px solid #e4eee9;
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .opcion h2 {
-    font-size: 17px;
+    color: #46535e;
+
+    font-size: 16px;
+
     font-weight: bold;
-    margin-bottom: 10px;
+
+    margin-bottom: 15px;
 }
+
+
+/* =========================================
+   BOTONES SÍ / NO
+========================================= */
 
 .botones {
     display: flex;
-    justify-content: space-between;
+
+    justify-content: flex-start;
+
     align-items: center;
-    padding: 0 5px;
+
+    gap: 15px;
 }
 
 .botones label {
     cursor: pointer;
 }
 
+
+/* ocultar radio original */
+
 .botones input {
     display: none;
 }
 
+
+/* botón */
+
 .botones span {
     display: flex;
-    width: 65px;
+
+    width: 75px;
+
     height: 43px;
 
     justify-content: center;
+
     align-items: center;
 
-    border: 3px solid #34404d;
+    border: 2px solid #56636b;
+
+    border-radius: 12px;
+
     background: white;
 
-    font-size: 17px;
+    color: #56636b;
+
+    font-size: 15px;
+
     font-weight: bold;
 
-    transition: 0.2s;
+    transition: all 0.2s ease;
 }
 
-.botones input:checked + span {
-    background: #34404d;
-    color: white;
+.botones span:hover {
+    border-color: #43ad7c;
+
+    color: #35a976;
+
+    transform: translateY(-2px);
 }
+
+
+/* seleccionado */
+
+.botones input:checked + span {
+    background: #43ad7c;
+
+    border-color: #43ad7c;
+
+    color: white;
+
+    box-shadow:
+        0 6px 15px
+        rgba(67, 173, 124, 0.25);
+}
+
+
+/* =========================================
+   BOTÓN CONTINUAR
+========================================= */
 
 .continuar {
     width: 100%;
-    height: 50px;
 
-    margin-top: 35px;
+    height: 55px;
+
+    margin-top: 32px;
 
     border: none;
-    border-radius: 6px;
 
-    background: #222;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #46535e,
+            #34414a
+        );
+
     color: white;
 
     font-family: inherit;
-    font-size: 18px;
+
+    font-size: 16px;
+
     font-weight: bold;
 
+    letter-spacing: 0.5px;
+
     cursor: pointer;
-    transition: 0.2s;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 10px 22px
+        rgba(52, 65, 74, 0.22);
+
+    transition: all 0.2s ease;
 }
 
 .continuar:hover {
-    background: #34404d;
+    background:
+        linear-gradient(
+            135deg,
+            #43ad7c,
+            #299367
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(67, 173, 124, 0.28);
 }
 
+.continuar:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .contenedor {
+        max-width: 600px;
+
+        padding: 35px 30px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULAR
+========================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 0;
+
+        background: white;
+
+        align-items: stretch;
+    }
+
+    .contenedor {
+        min-height: 100vh;
+
+        border-radius: 0;
+
+        border: none;
+
+        box-shadow: none;
+
+        padding: 30px 22px;
+    }
+
+    .contenedor::after {
+        font-size: 35px;
+
+        right: 20px;
+
+        top: 25px;
+    }
+
+    h1 {
+        font-size: 29px;
+
+        padding-right: 45px;
+    }
+
+    .campo input {
+        height: 48px;
+    }
+
+    .opcion {
+        padding: 17px;
+    }
+
+    .botones span {
+        width: 70px;
+    }
+}
