@@ -210,11 +210,10 @@ margin-top:15px;
     margin: 0;
 }
 
-.boton-carrito{
-    position: absolute;
+.boton-carrito {
+    position: fixed;
+    top: 20px;
     right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
 
     background-color: #222;
     color: white;
@@ -228,9 +227,11 @@ margin-top:15px;
     font-weight: bold;
 
     transition: 0.3s;
+
+    z-index: 1000;
 }
 
-.boton-carrito:hover{
+.boton-carrito:hover {
     background-color: #FFD700;
     color: #222;
 }
