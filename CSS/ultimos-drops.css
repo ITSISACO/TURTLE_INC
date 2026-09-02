@@ -176,3 +176,20 @@ footer{
     bottom:0;
     width:100%;
 }
+
+.imagen-producto {
+    position: relative;
+}
+
+.proximamente {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ffd900;
+    color: #222;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 2;
+}
