@@ -5,13 +5,13 @@ header{
     text-align:center;
 }
 
-body{
-    font-family:'Luckiest Guy',cursive;
+body{ 
+    font-family:'Luckiest Guy',cursive; 
     padding:0;
-    background-color:#f4f4f4;
-    text-align: center;
+    margin:0;
+    background-color:#f4f4f4; 
+    text-align:center; 
 }
-
 
 
 /* Barra de navegación */
@@ -156,7 +156,7 @@ footer{
     background: #ffb700;
 }
 
-.encabezado { 
+.encabezado{ 
     background: linear-gradient(90deg, #FFD700, #81C784); 
     color: white; 
     padding: 20px; 
@@ -165,13 +165,10 @@ footer{
     display: flex; 
     justify-content: center; 
     align-items: center;
+
+    /* Separación entre el encabezado y la barra negra */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
-
-.encabezado h1 {
-    margin: 0;
-}
-
 .boton-carrito {
     display: inline-flex;
     align-items: center;
