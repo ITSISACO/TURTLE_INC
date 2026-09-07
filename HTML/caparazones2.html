@@ -1,86 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caparazones2</title>
-<link rel="stylesheet" href="../CSS/caparazones2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caparazones2</title>
+    <link rel="stylesheet" href="../CSS/caparazones2.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Caparazones</h1>
-</header>
+    <header>
+        <h1>Caparazones</h1>
+    </header>
 
-<nav>
-<h2><a href="inicio.html" class="logo">TURTLE INC</a></h2>
+    <nav>
+        <h2><a href="inicio.html" class="logo">TURTLE INC</a></h2>
 
-<div class="busqueda">
-    <input type="text" id="buscar" placeholder="Buscar...">
-    <button onclick="buscarContenido()">🐢</button>
-</div>
+        <div class="busqueda">
+            <input type="text" id="buscar" placeholder="Buscar...">
+            <button onclick="buscarContenido()">🐢</button>
+        </div>
 
-<ul>
-<li><a href="Ultimos-drops.html">Ultimos drops</a></li>
-<li><a href="caparazones.html">Caparazones</a></li>
-<li><a href="prendas.html">Prendas</a></li>
-<li><a href="perfil.html">Perfil</a></li>
-<!-- Carrito dentro del menú navegable -->
-<li><a href="carritotortugo.html" class="boton-carrito">🛒</a></li>
-</ul>
+        <ul>
+            <li><a href="Ultimos-drops.html">Ultimos drops</a></li>
+            <li><a href="caparazones.html">Caparazones</a></li>
+            <li><a href="prendas.html">Prendas</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="carritotortugo.html" class="boton-carrito">🛒</a></li>
+        </ul>
+    </nav>
 
-</nav>
+    <main>
+        <h1>Bienvenido a Caparazones</h1>
+        <div class="parrafos">
+            <p>Los Caparazones son el sistema de recompensas de Turtle Inc.</p>
+            <p>Cada compra suma puntos que podrás cambiar por descuentos exclusivos.</p>
+        </div>
 
-<main>
+        <h1 style="margin-top:40px;">RECOMPENSAS</h1>
 
-<h1>Bienvenido a Caparazones</h1>
-<div class="parrafos">
-<p>
-Los Caparazones son el sistema de recompensas de Turtle Inc.
-</p>
+        <div class="recompensas">
+            <div class="card">
+                <h2>25% DE DESCUENTO</h2>
+                <h3>100 Caparazones</h3>
+                <button class="btn-canjear" onclick="abrirModal()">Canjear</button>
+            </div>
 
-<p>
-Cada compra suma puntos que podrás cambiar por descuentos exclusivos.
-</p>
-</div>
-<h1 style="margin-top:40px;">RECOMPENSAS</h1>
+            <div class="card">
+                <h2>50% DE DESCUENTO</h2>
+                <h3>200 Caparazones</h3>
+                <button class="btn-canjear" onclick="abrirModal()">Canjear</button>
+            </div>
 
-<div class="recompensas">
+            <div class="card">
+                <h2>75% DE DESCUENTO</h2>
+                <h3>350 Caparazones</h3>
+                <button class="btn-canjear" onclick="abrirModal()">Canjear</button>
+            </div>
 
-<div class="card">
-<h2>25% DE DESCUENTO</h2>
-<h3>100 Caparazones</h3>
-<button>Canjear</button>
-</div>
+            <div class="card">
+                <h2>99% DE DESCUENTO</h2>
+                <h3>666 Caparazones</h3>
+                <button class="btn-canjear" onclick="abrirModal()">Canjear</button>
+            </div>
+        </div>
+    </main>
 
-<div class="card">
-<h2>50% DE DESCUENTO</h2>
-<h3>200 Caparazones</h3>
-<button>Canjear</button>
-</div>
+    <div class="info">
+        <footer>
+            &copy; 2026 TURTLE INC. Todos los derechos reservados.
+        </footer>
+    </div>
 
-<div class="card">
-<h2>75% DE DESCUENTO</h2>
-<h3>350 Caparazones</h3>
-<button>Canjear</button>
-</div>
+    <!-- VENTANA EMERGENTE (MODAL) -->
+    <div id="modal-canje" class="modal-overlay">
+        <div class="modal-contenido">
+            <div class="modal-icono">
+                <span>✓</span>
+            </div>
+            <span class="modal-subtitulo">TURTLE INC</span>
+            <h2 class="modal-titulo">¡Caparazones canjeados!</h2>
+            <p class="modal-texto">
+                Tus caparazones han sido canjeados con éxito.<br>
+                <strong>Turtle Inc 🐢</strong>
+            </p>
+            <button class="btn-aceptar" onclick="cerrarModal()">Aceptar</button>
+        </div>
+    </div>
 
-<div class="card">
-<h2>99% DE DESCUENTO</h2>
-<h3>666 Caparazones</h3>
-<button>Canjear</button>
-</div>
+    <!-- SCRIPT DE CONTROL DEL MODAL -->
+    <script>
+        function abrirModal() {
+            document.getElementById("modal-canje").style.display = "flex";
+        }
 
-</div>
-
-</main>
-
-<div class="info">
-<footer>
-   &copy; 2026 TURTLE INC. Todos los derechos reservados.
-</footer>
-</div>
+        function cerrarModal() {
+            document.getElementById("modal-canje").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>

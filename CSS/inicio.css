@@ -156,18 +156,19 @@ footer{
     background: #ffb700;
 }
 
-.encabezado{
-    background: linear-gradient(90deg, #FFD700, #81C784);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
+.encabezado { 
+    background: linear-gradient(90deg, #FFD700, #81C784); 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
     align-items: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-.encabezado h1{
+.encabezado h1 {
     margin: 0;
 }
 
@@ -175,16 +176,16 @@ footer{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent; /* Fondo transparente para integrarse a la barra */
+    background-color: transparent;
     color: white;
-    font-size: 20px;               /* Tamaño ideal para el emoji */
+    font-size: 20px;
     padding: 8px 12px;
-    border-radius: 50%;            /* Redondeado tipo icono */
+    border-radius: 50%;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .boton-carrito:hover {
-    background-color: #ffd000;    /* Fondo amarillo al pasar el cursor */
-    transform: scale(1.1);         /* Ligero efecto de aumento */
+    background-color: #ffd000;
+    transform: scale(1.1);
 }
