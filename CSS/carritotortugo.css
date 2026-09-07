@@ -13,7 +13,7 @@ body{
     text-align:center; 
 }
 
-.encabezado{ 
+.encabezado { 
     background: linear-gradient(90deg, #FFD700, #81C784); 
     color: white; 
     padding: 20px; 
@@ -22,12 +22,12 @@ body{
     display: flex; 
     justify-content: center; 
     align-items: center;
-
-    /* Separación entre el encabezado y la barra negra */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-
+.encabezado h1 {
+    margin: 0;
+}
 
 /* Barra de navegación */
 .navbar{

@@ -15,21 +15,16 @@ body {
 }
 
 /* Encabezado amarillo/verde */
-.encabezado {
-    background: linear-gradient(90deg, #FFD700, #81C784);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
+.encabezado { 
+    background: linear-gradient(90deg, #FFD700, #81C784); 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
     align-items: center;
-
-    /* Separación entre encabezado y navbar */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-
-    /* Para que no se genere espacio extraño */
-    box-sizing: border-box;
 }
 
 .encabezado h1 {
@@ -218,7 +213,6 @@ body {
     background-color: #ffd000;
     transform: scale(1.1);
 }
-
 /* Footer */
 footer {
     background-color: #222;
