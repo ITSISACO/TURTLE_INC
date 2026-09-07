@@ -24,6 +24,15 @@ body{
     padding:15px 30px;
 }
 
+.navbar{
+    box-shadow:0 3px 10px rgba(0,0,0,0.3);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background-color:#222;
+    padding:15px 30px;
+}
+
 /* Contenedor principal */
 .container-fluid{
     width:100%;
@@ -172,5 +181,4 @@ button:hover {
     background-color: #ffd000;    /* Fondo amarillo al pasar el cursor */
     transform: scale(1.1);         /* Ligero efecto de aumento */
 }
-
 
